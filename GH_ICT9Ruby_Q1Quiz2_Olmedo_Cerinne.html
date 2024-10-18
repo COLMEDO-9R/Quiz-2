@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="
+	width=device-width,initial-scale=1">
+	<title>Movies</title>
+    <!-- Google Fonts -->
+	<style type="text/css">
+
+
+body {
+ font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  background-color: yellow;
+			color:cadetblue;
+  text-align: center;
+
+}
+
+h1{
+	color:yellow;
+	font-family: "Playpen Sans", cursive;
+	background-color: cadetblue;
+	text-align:center;
+}
+
+
+
+.flip-card {
+  background-color: yellow;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  text-align: center;
+  margin: auto;
+
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,2,1.2);
+  
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  text-align: center;
+
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  text-align: center;
+}
+
+.flip-card-front {
+  background-color: yellow;
+  color: cadetblue;
+  text-align: center;
+}
+
+.flip-card-back {
+  background-color: cadetblue;
+  color: yellow;
+  transform: rotateY(180deg);
+  text-align: center;
+
+   
+  img {
+
+	display:block;
+	margin:auto;
+	text-align: center;
+	center-align:center;
+	border:10px solid cadetblue;
+    border-radius: 26px;
+
+	
+    }
+
+</style>
+</head>
+<body>
+
+
+	<!-- HEADER -->
+	<div class="header">
+		<h1>MINIONS THE MOVIE</h1>
+	</div>
+
+	<!-- MOVIE INFO -->
+	<div class="info">
+	<img src="https://image.tmdb.org/t/p/original/tMaGZ2HR8HAFwkx4YRib0CDVfNT.jpg" alt="Minions" width="200">
+	<p><strong>Minions are small, yellow pill-shaped creatures which have existed since the beginning of time, evolving from single-celled organisms into beings which exist only to serve history's most evil masters, but they accidentally end up killing all their masters: rolling a Tyrannosaurus into a volcano, letting a caveman get mauled by a bear, crushing a Pharaoh and his subjects with a pyramid, and exposing Count Dracula to sunlight. They are driven into isolation after firing a cannon at Napoleon while in Russia and start a new life inside a cave, but after many years, the Minions become sad and unmotivated without a master to serve. This prompts three Minions; named Kevin, Stuart and Bob, to go out on a quest to find a new master for their brethren to follow.</strong></p>
+	</div>
+
+	<!-- CHARACTERS -->
+    <h2>Minions</h2>
+	<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="data:image/jpeg;base64,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" alt="Avatar" style="width:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Kevin</h1> 
+      <p>Minion</p> 
+      <p>serious, protective nature,and brave</p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://static.wikia.nocookie.net/despicableme/images/6/60/Stuart_%28Despicable_Me_3%29.jpg/revision/latest/scale-to-width/360?cb=20230624181730" alt="Avatar" style="width:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Stuart</h1> 
+      <p>Moody minion</p> 
+      <p>He's a nice guy i promise</p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://static.wikia.nocookie.net/despicableme/images/e/eb/Bob_Happy.jpg/revision/latest/scale-to-width/360?cb=20240119153934" alt="Avatar" style="width:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>King Bob</h1> 
+      <p>Baby king</p> 
+      <p>He's just a baby</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+
+	<!-- FORM -->
+	<div>
+		<div>
+		<form action="/action_page.php">
+  <p><label for="Minions"><strong>What can you say about Minions?</strong></label></p>
+  <textarea id="minions" name="minions" rows="4" cols="50"></textarea>
+  <br>
+  <input type="submit" value="Submit">
+</form>
+</div>
+<br/>
+<div>
+	<form action="/action_page.php">
+  <label for="cars"><strong>Choose a Minion</strong></label>
+  <select name="cars" id="cars">
+    <option value="kevin">Kevin</option>
+    <option value="stuart">Stuart</option>
+    <option value="bob">Bob</option>
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+
+
+	</div>
+	<div>
+
+	<!-- FOOTER -->
+	<div class="footer">
+		<h4> Cerinne Kimberlee S. Olmedo | 9-Ruby | Q1 Quiz#2</h4>
+	</div>
+</body>
+</html>
+
+
